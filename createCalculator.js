@@ -1,29 +1,22 @@
-// Scenario: You are building a calculator for an online math game. The
-// calculator must include functionality to perform the following:
-
-
-// / ● Absolute Value Calculation: Given any number, return its absolute
-// / value.
+// ● Absolute Value:
 // function getAbsoluteValue(num) {
 // return Math.abs(num);
 // }
 //console.log(getAbsoluteValue(45));
 
-// ● Power Calculation: Calculate and return the value of a base raised to
-// a specific power.
+// ● Power:
 // function raiseToPowerOf(x, y) {
 //     return Math.pow(x ,y);
 // }
 // console.log(raiseToPowerOf(2, 3));
 
-// ● Square Root Finder: Calculate the square root of a number.
+// ● Square Root Finder:
 // function squareRootOf(a) {
 //     return Math.sqrt(a);
 // }
 // console.log(squareRootOf(4));
 
-// ● Maximum and Minimum Finder: From a given set of numbers,
-// determine the largest and smallest values.
+// ● Maximum and Minimum Finder:
 // let numberArr = [2, 45, 104];
 // function findMaxAndMin(nums) {
 //     return { 
@@ -33,36 +26,17 @@
 // }
 // console.log(findMaxAndMin(numberArr));
 
-// ● Random Number Generator: Generate a random integer within a
-// specified range.
-
+// ● Random Number Generator: 
 // function generateRandomNumber(min, max) {
 //     return Math.round(Math.random() * (max - min) + min);
 // }
 // console.log(generateRandomNumber(2, 5));
 
-// ● Custom Rounding: Round a number to a specified number of decimal
-//places.
-
+// ● Custom Rounding:
 // function roundingToDecimal(num) {
 //     return Math.round(num * 100) / 100 // rounds to 2 decimal places
 // }
 // console.log(`Rounded two decimal places: ` + roundingToDecimal(4.675844656));
-
-
-// Step-by-Step Tasks:
-// 1. Write a function for each operation listed above using the Math
-// module.
-
-
-
-// 2. Test each function with sample inputs to ensure it works as intended.
-
-
-
-// 3. Combine the individual functions into a single "calculator" program
-// where the user can select an operation and input the required values.
-
 
 
 // 4. Test the calculator by performing the following:
@@ -73,6 +47,8 @@
 // 0.5, 27].
 // ● Generate a random number between 1 and 50.
 // ● Round 23.67891 to 2 decimal places.
+
+
 
 const readline = require("readline-sync");
 
@@ -237,3 +213,24 @@ if (choice === "1") {
 
     console.log("Invalid option.");
 }
+
+// Test Cases//
+// ● Find the absolute value of -45.67.
+console.log("The absolute value of -45.67 is: " + calc.getAbsoluteValue(-45.67));
+
+// ● Raise 5 to the power of 3.
+console.log("Five to the power of Three equals: " + calc.raiseToPowerOf(5, 3));
+
+// ● Calculate the square root of 144.
+console.log("The square root of 144 is: " + calc.squareRootOf(144));
+
+// ● Determine the largest and smallest values from [3, 78, -12,
+// 0.5, 27].
+const numsArray = [3, 78, -12, 0.5, 27];
+console.log("The max and min of [3, 78, -12, 0.5, 27] is:" );
+console.log(calc.findMaxAndMin(numsArray));
+// ● Generate a random number between 1 and 50.
+console.log("A random number between 1 and 50 is: " + calc.generateRandomNumber(1, 50));
+
+// ● Round 23.67891 to 2 decimal places.
+console.log("23.67891 rounded to 2 decimal places is: " + calc.roundingToDecimal(23.67891, 2));
