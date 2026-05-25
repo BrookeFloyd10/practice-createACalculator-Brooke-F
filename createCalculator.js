@@ -39,20 +39,7 @@
 // console.log(`Rounded two decimal places: ` + roundingToDecimal(4.675844656));
 
 
-// 4. Test the calculator by performing the following:
-// ● Find the absolute value of -45.67.
-// ● Raise 5 to the power of 3.
-// ● Calculate the square root of 144.
-// ● Determine the largest and smallest values from [3, 78, -12,
-// 0.5, 27].
-// ● Generate a random number between 1 and 50.
-// ● Round 23.67891 to 2 decimal places.
-
-
-
 const readline = require("readline-sync");
-
-
 
 class Calculator {
 
@@ -229,6 +216,7 @@ console.log("The square root of 144 is: " + calc.squareRootOf(144));
 const numsArray = [3, 78, -12, 0.5, 27];
 console.log("The max and min of [3, 78, -12, 0.5, 27] is:" );
 console.log(calc.findMaxAndMin(numsArray));
+
 // ● Generate a random number between 1 and 50.
 console.log("A random number between 1 and 50 is: " + calc.generateRandomNumber(1, 50));
 
