@@ -61,18 +61,26 @@ findMaxAndMin(nums) {
         min : Math.min(...nums)
     };
 }
+// original incorrect function: 
+// generateRandomNumber(min, max) {
+//     return Math.round(Math.random() * (max - min) + min);
+// }
 
+// New function edited post solution code evaluation // commented for refrence purposes:
 generateRandomNumber(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-roundingToDecimal(num) {
-    return Math.round(num * 100) / 100 // rounds to 2 decimal places
+// Original incorrect function:
+// roundingToDecimal(num) {
+//     return Math.round(num * 100) / 100 // rounds to 2 decimal places
+// }
+
+// New functon edited post solution code evaluation // commented for refrence purposes:
+roundingToDecimal(num, decimals) {
+    return Number(num.toFixed(decimals));
+ }
 }
-
-}
-
-
 // helper functions
 
 function getNumber(prompt) {
